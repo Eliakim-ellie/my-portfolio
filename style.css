@@ -6,15 +6,15 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: aquamarine;
+  background-color: rgb(187, 197, 194);
   color:	black;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #1F2937;
-  color: white;
+  background-color: #ccd2da;
+  color:black;
   position: sticky;
     top: 0;              /* Add this line */
   z-index: 1000; 
@@ -23,6 +23,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+  color: #1d1d1d;
 }
 .nav-links a {
   text-decoration: none;
@@ -34,12 +35,14 @@ body {
 }
 .logo {
   font-size: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://source.unsplash.com/1600x900/?technology') center/cover no-repeat;
-  color: white;
+  background-color: #ccc3;
+  color: black;
   text-align: center;
   padding: 100px 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .hero h2 {
   font-size: 3rem;
@@ -112,7 +115,7 @@ img{
   font-size: 2rem;
 }
 .alt {
-  background-color:#3B82F6;
+  background-color:#bbc0c7;
 }
 .services-grid {
   display: flex;
@@ -187,7 +190,7 @@ form {
 input, textarea {
   padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 button {
@@ -196,7 +199,7 @@ button {
   border: none;
   padding: 0.75rem;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 button:hover {
@@ -207,4 +210,38 @@ footer {
   padding: 1rem;
   background-color: #1d1d1d;
   color:#EF4444;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* adjust based on navbar height */
+    right: 0;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+    color: #1d1d1d;
+  }
+  .nav-links.active {
+    display: flex;
+    align-items: center;
+    color: #333;
+  }
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    position: relative;
+  }
 }
