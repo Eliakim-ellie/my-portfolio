@@ -142,7 +142,8 @@ img{
 }
 
 #projects .card {
-  background: #F59E0B;
+  /*background: #cc7109;*/
+  background-image: url("Screenshot 2025-06-10 223221.png");
   color: #fff;
   padding: 2rem 1.5rem;
   border-radius: 12px;
